@@ -1,5 +1,5 @@
-RSocket with protobuf IDL demo
-==============================
+RSocket service with protobuf IDL definition
+============================================
 
 基于Protobuf接口定义开发RSocket服务，主要特性如下：
 
