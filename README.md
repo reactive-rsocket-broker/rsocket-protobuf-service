@@ -5,7 +5,7 @@ RSocket service with protobuf IDL definition
 
 * 使用proto文件定义通讯接口，兼容gRPC服务接口定义
 * 使用Protobuf作为数据序列化格式，满足高性能的要求
-* 使用Reactive接口，对比gRPC即可更简单
+* 使用Reactive接口，对比gRPC接口更简单
 
 # 开发步骤
 
@@ -127,3 +127,4 @@ rsocket.jwt-token=your_token_here
 # References
 
 * proto-rsocket-plugin: https://github.com/linux-china/proto-rsocket-plugin
+* gRPC Service definition: https://grpc.io/docs/what-is-grpc/core-concepts/
