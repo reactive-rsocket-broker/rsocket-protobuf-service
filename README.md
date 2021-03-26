@@ -10,7 +10,16 @@ RSocket service with protobuf/gPRC IDL definition
 # 模块说明
 
 * account-service-api: Account对应的服务接口，包括proto文件接口
-* account-service-provider: Spring Boot应用，负责实现服务
+* account-service-provider: Spring Boot应用服务端，负责实现服务
+* account-service-requester: Spring Boot应用客户端，负责服务的调用
+
+# 如何运行样例？
+
+* 首先执行 `mvn -DskipTests package` 进行项目编译，项目基于JDK 1.8
+* 启动Alibaba RSocket Broker: `docker-compose up -d`
+* 启动account-service-responder应用
+* 启动account-service-requester应用
+* 调用curl命令进行测试： `curl -X GET --location "http://localhost:8192/account/1"`
 
 # 开发步骤
 
@@ -133,6 +142,20 @@ rsocket.jwt-token=your_token_here
 
 * 继承gRPC对应的Reactive接口：为了方便客户端调用，你可以继承接口，添加对应的default method
 * 如果你有对象转换的需求，如POJO到Protobuf message对象转换，可以考虑使用MapStruct https://mapstruct.org/
+* 将Protobuf Message对象转为为json输出，可以使用Protobuf提供的JsonFormat进行转换
+
+```java
+    @GetMapping(value = "/account/{id}", produces = "application/json")
+    public Mono<String> showAccount(@PathVariable("id") Integer id) {
+        return accountProtoService.findById(Int32Value.of(id)).handle((account, sink) -> {
+            try {
+                sink.next(JsonFormat.printer().print(account));
+            } catch (Exception e) {
+                sink.error(e);
+            }
+        });
+    }
+```
 
 # References
 
