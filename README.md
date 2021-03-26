@@ -1,7 +1,7 @@
-RSocket service with protobuf IDL definition
-============================================
+RSocket service with protobuf/gPRC IDL definition
+=================================================
 
-基于Protobuf接口定义开发RSocket服务，主要特性如下：
+基于Protobuf/gRPC接口定义开发RSocket服务，主要特性如下：
 
 * 使用proto文件定义通讯接口，兼容gRPC服务接口定义
 * 使用Protobuf作为数据序列化格式，满足高性能的要求
