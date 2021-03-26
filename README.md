@@ -124,6 +124,11 @@ rsocket.jwt-token=your_token_here
 
 最后启动应用，这样服务就会注册到Alibaba RSocket Broker上，然后其他第三方就可以进行调用。
 
+# 相关实践
+
+* 继承gRPC对应的Reactive接口：为了方便客户端调用，你可以继承接口，添加对应的default method
+* 如果你有对象转换的需求，如POJO到Protobuf message对象转换，可以考虑使用MapStruct https://mapstruct.org/
+
 # References
 
 * proto-rsocket-plugin: https://github.com/linux-china/proto-rsocket-plugin
