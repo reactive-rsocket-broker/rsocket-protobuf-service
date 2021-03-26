@@ -7,6 +7,11 @@ RSocket service with protobuf/gPRC IDL definition
 * 使用Protobuf作为数据序列化格式，满足高性能的要求
 * 使用Reactive接口，对比gRPC接口更简单
 
+# 模块说明
+
+* account-service-api: Account对应的服务接口，包括proto文件接口
+* account-service-provider: Spring Boot应用，负责实现服务
+
 # 开发步骤
 
 ###  定义proto文件
