@@ -105,7 +105,7 @@ public class AccountProtoServiceImpl implements AccountProtoService {
 
 添加alibaba-rsocket-spring-boot-starter依赖，如下：
 
-```
+```xml
 <dependency>
   <groupId>com.alibaba.rsocket</groupId>
   <artifactId>alibaba-rsocket-spring-boot-starter</artifactId>
