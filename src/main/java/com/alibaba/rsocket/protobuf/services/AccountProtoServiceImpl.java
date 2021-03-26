@@ -9,8 +9,8 @@ import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-@RSocketService(serviceInterface = AccountProtoService.class, encoding = "protobuf")
 @Service
+@RSocketService(serviceInterface = AccountProtoService.class, encoding = "protobuf")
 public class AccountProtoServiceImpl implements AccountProtoService {
     @Override
     public Mono<Account> findById(Int32Value id) {
