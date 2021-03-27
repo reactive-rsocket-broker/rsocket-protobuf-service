@@ -83,7 +83,7 @@
             <plugin>
                 <groupId>org.mvnsearch</groupId>
                 <artifactId>proto-rsocket-plugin</artifactId>
-                <version>1.0.0</version>
+                <version>1.0.1</version>
                 <executions>
                     <execution>
                         <phase>generate-sources</phase>
