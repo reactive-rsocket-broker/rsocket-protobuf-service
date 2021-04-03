@@ -20,6 +20,7 @@
         <module>account-service-api</module>
         <module>account-service-responder</module>
         <module>account-service-requester</module>
+        <module>account-service-spring-boot-starter</module>
     </modules>
 
     <dependencies>
