@@ -6,6 +6,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 public interface AccountProto2Service extends AccountProtoService {
+
     default Mono<Account> findById(int id) {
         return findById(Int32Value.of(id));
     }
