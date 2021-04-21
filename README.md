@@ -82,7 +82,7 @@ service AccountProtoService {
             <plugin>
                 <groupId>org.mvnsearch</groupId>
                 <artifactId>proto-rsocket-plugin</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
+                <version>1.0.2</version>
                 <executions>
                     <execution>
                         <phase>generate-sources</phase>
