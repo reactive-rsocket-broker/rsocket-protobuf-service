@@ -11,7 +11,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <protobuf-java.version>3.18.0</protobuf-java.version>
+        <protobuf-java.version>3.17.1</protobuf-java.version>
     </properties>
 
     <dependencies>
